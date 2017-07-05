@@ -7,6 +7,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript';
 import babel from 'rollup-plugin-babel';
 import uglify from 'rollup-plugin-uglify';
+import builtins from 'rollup-plugin-node-builtins';
 
 export default {
     entry: 'src/test.ts',
@@ -14,6 +15,7 @@ export default {
     moduleName: 'test',
     dest: 'dist/test.min.js',
     plugins: [
+        builtins(),
         resolve({
             customResolveOptions: 'node_modules',
             jsnext: true
