@@ -18,7 +18,8 @@
     "eofline": false,
     "max-classes-per-file": [true, 5],
     "no-unused-variable": true,
-    "quotemark": [true, "single", "avoid-escape"]
+    "quotemark": [true, "single", "avoid-escape"],
+    "object-literal-sort-keys": false
   },
   "jsRules": {
     "max-line-length": [true, 120],
@@ -34,6 +35,7 @@
     "eofline": false,
     "max-classes-per-file": [true, 5],
     "no-unused-variable": true,
-    "quotemark": [true, "single", "avoid-escape"]
+    "quotemark": [true, "single", "avoid-escape"],
+    "object-literal-sort-keys": false
   }
 }
