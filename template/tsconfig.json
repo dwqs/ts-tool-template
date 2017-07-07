@@ -12,7 +12,6 @@
     "noImplicitReturns": true,
     "removeComments": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": true,
     "allowUnusedLabels": true
   },
