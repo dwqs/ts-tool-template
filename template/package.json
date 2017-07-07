@@ -1,19 +1,19 @@
 {
-  "name": "ts-tools",
-  "version": "0.0.1",
-  "description": "A simple development template to build some tools with typescript.",
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "author": "{{author}}",
+  "description": "{{description}}",
   "license": "MIT",
   "main": "dist/test.min.js",
-  "typings": "dist/test.d.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "clean": "rm -rf dist typings example/dist types",
     "prepush": "npm run lint",
-    "prebuild": "npm run prepush && ./node_modules/.bin/tsc -p ./tsconfig.types.json && rm -rf dist",
-    "build": "./node_modules/.bin/rollup -c",
-    "postbuild": "mv types/test.d.ts dist/",
+    "prebuild": "npm run prepush && ./node_modules/.bin/tsc -p ./tsconfig.types.json",
+    "build": "./node_modules/.bin/rollup -c && ./node_modules/.bin/rollup -c rollup.build.config.js",
+    "postbuild": "mkdir typesgst && mv typings/index.d.ts types/ && rm -rf typings",
     "lint": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check src/**/*.ts",
-    "fix": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check --fix src/**/*.ts",
-    "prepublishOnly": "npm run build"
+    "fix": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check --fix src/**/*.ts"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -31,5 +31,9 @@
     "tslint": "^5.4.3",
     "typescript": "^2.4.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">= 5.0.0",
+    "npm": ">= 3.0.0"
+  }
 }
