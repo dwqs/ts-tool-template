@@ -21,7 +21,9 @@ export default {
                 
             }
         }),
-        typescript(),
+        typescript({
+            typescript: require('typescript')
+        }),
         babel({
             exclude: 'node_modules/**',
             externalHelpers: true
