@@ -1,8 +1,8 @@
 {
-  "name": "test",
+  "name": "{{name}}",
   "main": "dist/test.js",
-  "description": "A simple module build with ts-tool-template",
-  "authors": "your-email",
+  "description": "{{description}}",
+  "authors": ["{{author}}"],
   "license": "MIT",
   "ignore": [
     "*",
