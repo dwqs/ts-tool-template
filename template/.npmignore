@@ -1,4 +1,5 @@
 src
+lib
 .gitignore
 .vscode
 .npmrc
